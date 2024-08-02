@@ -1,1 +1,7 @@
 com\ridetogether\RidetogetherApplication.class
+com\ridetogether\repository\TripRepository.class
+com\ridetogether\controller\TripResource.class
+com\ridetogether\service\TripService.class
+com\ridetogether\service\TripServiceImpl.class
+com\ridetogether\dto\TripDTO.class
+com\ridetogether\model\Trip.class
