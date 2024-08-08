@@ -1,27 +1,25 @@
 package com.ridetogether.model;
 
+import java.time.LocalDateTime;
+import java.util.List;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 @Document(collection = "Schedule")
 public class Schedule {
 
-    @Id
-    private String id;
-    private Route route;
-    private String vehicleId;
-    private String driverId;
-    private LocalDateTime scheduleDate;
-    private List<Timing> timings;
-    private ScheduleStatus status;
-    private List<Seat> seats;
+  @Id private String scheduleId;
+  private Route route;
+  private Vehicle vehicle;
+  private LocalDateTime scheduleDate;
+  private ScheduleStatus status;
+  private List<Seat> seats;
 }

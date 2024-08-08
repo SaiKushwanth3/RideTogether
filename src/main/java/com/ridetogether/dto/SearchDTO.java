@@ -1,19 +1,19 @@
 package com.ridetogether.dto;
 
-
+import java.time.LocalDate;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.time.LocalDate;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 public class SearchDTO {
 
-    private String source;
-    private String destination;
-    private int numberOfPassengers;
-    private LocalDate scheduleDate;
+  private String source;
+  private String destination;
+  private int numberOfPassengers;
+  private LocalDate scheduleDate;
 }
