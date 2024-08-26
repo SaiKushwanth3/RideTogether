@@ -11,9 +11,11 @@ public interface ScheduleService {
 
   public Schedule getScheduleById(String scheduleId);
 
+  public List<Schedule> getScheduleByDriverId(String driverId);
+
   public Schedule updateSchedule(ScheduleDTO scheduleDTO);
 
-  public List<Schedule> getSchedules();
+  public List<Schedule> getAllSchedules();
 
   public Schedule createSchedule(ScheduleDTO scheduleDTO);
 }

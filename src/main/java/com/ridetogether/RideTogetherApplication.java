@@ -8,6 +8,5 @@ public class RideTogetherApplication {
 
   public static void main(String[] args) {
     SpringApplication.run(RideTogetherApplication.class, args);
-    System.out.println("Hi");
   }
 }

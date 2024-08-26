@@ -9,4 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ScheduleRepository extends MongoRepository<Schedule, String> {
   List<Schedule> findByScheduleDateBetween(LocalDateTime start, LocalDateTime end);
+
+  List<Schedule> findByDriverId(String driverId);
 }

@@ -9,12 +9,14 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/schedules")
+@CrossOrigin
 public class ScheduleController {
 
   @Autowired private ScheduleServiceImpl scheduleService;
@@ -24,7 +26,7 @@ public class ScheduleController {
       @RequestParam String source,
       @RequestParam String destination,
       @RequestParam int numberOfPassengers,
-      @RequestParam LocalDate scheduleDate) {
+      @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate scheduleDate) {
     SearchDTO searchDTO =
         SearchDTO.builder()
             .source(source)
@@ -51,8 +53,8 @@ public class ScheduleController {
   @PutMapping("/{id}")
   public void updateSchedule(@RequestBody ScheduleDTO scheduleDTO) {}
 
-  @GetMapping("/hi")
-  public List<Schedule> getAllSchedule() {
-    return scheduleService.getSchedules();
+  @GetMapping("/all")
+  public List<Schedule> getAllSchedules() {
+    return scheduleService.getAllSchedules();
   }
 }

@@ -19,6 +19,7 @@ public class Schedule {
   @Id private String scheduleId;
   private Route route;
   private Vehicle vehicle;
+  private String driverId;
   private LocalDateTime scheduleDate;
   private ScheduleStatus status;
   private List<Seat> seats;

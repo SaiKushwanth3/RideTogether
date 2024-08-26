@@ -13,8 +13,6 @@ public class Segment {
   private String sourceId;
   private String destinationId;
   private String userId;
-  private String phoneNumber;
-  private String emailId;
   private Passenger passenger;
   private SeatStatus status;
 }
